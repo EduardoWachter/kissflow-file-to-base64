@@ -20,9 +20,9 @@ app.post('/convert', upload.single('file'), (req, res) => {
     try {
 
         // 1️⃣ Verificação básica
-        if (!req.file) {
-            return res.status(400).json({ error: 'Arquivo não recebido' });
-        }
+        // if (!req.file) {
+        //     return res.status(400).json({ error: 'Arquivo não recebido' });
+        // }
 
         // 2️⃣ Validação REAL de PDF (não confia em mimetype)
         const pdfHeader = req.file.buffer.slice(0, 4).toString();
